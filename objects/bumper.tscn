@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/bumper.png-9e893dbc62ae5ecdf0b53755919ee029.stex"
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 24.8127
+height = 56.6346
+
+[node name="Bumper" type="Area2D"]
+collision_layer = 16
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="bumper" type="Sprite" parent="."]
+position = Vector2( 0, -40 )
+texture = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, -46.3567 )
+rotation = 1.57079
+shape = SubResource( 1 )
